@@ -14,8 +14,9 @@ install:
     - pip install flake8
     - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
     - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
-    - git clone https://github.com/${ODOO_REPO}.git ${HOME}/old-version -b ${VERSION} --depth=1
     - travis_install_nightly
+    - INCLUDE="base"
+    - test_server
 
 #     - python ${HOME}/old-version/openerp-server --addons-path=${HOME}/old-version/addons --init=base --stop-after-init
 #     - python openerp-server --addons-path=./addons --database=test --update=all
