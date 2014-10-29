@@ -15,8 +15,7 @@ install:
     - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
     - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
     - travis_install_nightly
-    - INCLUDE="product"
-    - test_server
+
 
 #     - python ${HOME}/old-version/openerp-server --addons-path=${HOME}/old-version/addons --init=base --stop-after-init
 #     - python openerp-server --addons-path=./addons --database=test --update=all
@@ -27,6 +26,8 @@ install:
 #   * openerp/openupgrade/ directory
 # use a max length of 120
 script:
+    - INCLUDE="product"
+    - travis_run_tests ${VERSION}
     - flake8 scripts --max-line-length=120
     - flake8 openerp/openupgrade --max-line-length=120
     - flake8 openerp/addons/openupgrade* --max-line-length=120 --filename=__init__.py --ignore=F401
