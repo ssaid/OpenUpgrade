@@ -15,7 +15,7 @@ install:
     - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
     - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
     - travis_install_nightly
-    - INCLUDE="base"
+    - INCLUDE="product"
     - test_server
 
 #     - python ${HOME}/old-version/openerp-server --addons-path=${HOME}/old-version/addons --init=base --stop-after-init
