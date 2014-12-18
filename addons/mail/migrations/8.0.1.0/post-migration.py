@@ -2,10 +2,11 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2010 - 2014 Savoir-faire Linux
-#    (<http://www.savoirfairelinux.com>).
-#    (<http://www.akretion.com>).
-#    @author: Onestein <www.onestein.nl>
+#    This module copyright (C) 2014 Savoir-faire Linux
+#                              (<http://www.savoirfairelinux.com>).
+#                          (C) 2014 Akretion (<http://www.akretion.com>)
+#                          (C) 2014 ONESTEiN BV (<http://onestein.nl>)
+#                          (C) 2014 Therp BV (<http://therp.nl>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
