@@ -705,6 +705,9 @@ class stock_picking(osv.osv):
             order = {'confirmed': 0, 'waiting': 1, 'assigned': 2}
             order_inv = {0: 'confirmed', 1: 'waiting', 2: 'assigned'}
             lst = [order[x.state] for x in pick.move_lines if x.state not in ('cancel', 'done', 'dispatched', 'not_published')]
+            if len(lst) == 0:
+                _logger.warning('picking #{0}: all moves in state cancel or done or dispatched or not_published'.format(pick.id))
+                continue
             if pick.move_type == 'one':
                 res[pick.id] = order_inv[min(lst)]
             else:
